@@ -1,3 +1,4 @@
+-- Create a new table
 CREATE TABLE IF NOT EXISTS users(
     id INT PRIMARY KEY AUTOINCREMENT,
     email VARCHAR(255) UNIQUE NOT NULL,
