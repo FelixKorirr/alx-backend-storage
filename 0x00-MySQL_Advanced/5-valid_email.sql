@@ -1,3 +1,4 @@
+-- Resets the valid_email when email has been changed.
 DELIMITER //
 create trigger reset_email
 before UPDATE on users
