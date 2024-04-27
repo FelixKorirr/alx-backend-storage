@@ -5,7 +5,7 @@ AFTER INSERT ON orders
 FOR EACH ROW
 BEGIN
 UPDATE items
-SET quantity = quantity - NEW.amount
-where item = NEW.item_name;
+SET quantity = quantity - NEW.number
+where name = NEW.item_name;
 END //
 DELIMITER ;
