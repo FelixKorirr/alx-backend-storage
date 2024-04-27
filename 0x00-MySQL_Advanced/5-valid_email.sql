@@ -6,8 +6,6 @@ FOR EACH ROW
 begin
 if old.email != new.email then
 set new.valid_email = 0;
-else
-set new.valid_email = new.valid_email;
 end if;
 end //
 DELIMITER ;
