@@ -9,3 +9,8 @@ def insert_school(mongo_collection, **kwargs):
         my_dict[key] = value
 
     mongo_collection.insert_one(my_dict)
+
+    new_document = mongo_collection.find_one({})
+    id_of_document = new_document['_id']
+
+    return id_of_document
