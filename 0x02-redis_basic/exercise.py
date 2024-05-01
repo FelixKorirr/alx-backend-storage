@@ -19,4 +19,3 @@ class Cache:
         """Decodes redis data return type
             to desired format"""
         return key.decode('utf-8')
-        
