@@ -10,6 +10,7 @@ class Cache:
     def __init__(self):
         '''Initialize Cache class'''
         self._redis = redis.Redis()
+        self._redis.flushdb(True)
 
     def store(self, data):
         '''Generates random key'''
