@@ -18,8 +18,3 @@ class Cache:
         random_key = str(uuid.uuid4())
         self._redis.set(random_key, data)
         return random_key
-
-    def get(key):
-        '''Decodes redis data return type
-        to desired format'''
-        return key.decode('utf-8')
