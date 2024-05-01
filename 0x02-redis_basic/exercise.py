@@ -2,6 +2,7 @@
 '''Redis basics'''
 import uuid
 import redis
+from typing import Union
 
 
 class Cache:
@@ -12,7 +13,7 @@ class Cache:
         self._redis = redis.Redis()
         self._redis.flushdb(True)
 
-    def store(self, data):
+    def store(self, data: Union[str, bytes, int, float]):
         '''Generates random key'''
         random_key = str(uuid.uuid4())
         self._redis.set(random_key, data)
